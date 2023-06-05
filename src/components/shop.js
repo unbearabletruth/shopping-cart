@@ -1,19 +1,19 @@
-import images from '../assets/images/exportAll.js'
+import "../assets/styles/shop.css"
 import React, { useState } from "react";
-import uniqid from "uniqid";
+import data from "../data";
 
-const Shop = ({cart, addToCart}) => {
-  const [items, setItems] = useState([
-    {image: images["Behave.jpg"], title:"Behave", author:"Robert Sapolsky", id: uniqid()},
-  ])
+const Shop = ({addToCart}) => {
+ 
 
     return (
       <>
-        {items.map(book => {
+        {data.map(book => {
           return (
-            <div key={book.id}>
-              <Book image={book.image} title={book.title} author={book.author}/>
-              <button onClick={() => addToCart(book)}>Add to cart</button>
+            <div key={book.id} id="bookShop">
+              <div className="bookCard">
+                <Book image={book.image} title={book.title} author={book.author}/>
+                <button onClick={() => addToCart(book)}>Add to cart</button>
+              </div>
             </div>
           )
         })} 
@@ -24,8 +24,8 @@ const Shop = ({cart, addToCart}) => {
 const Book = ({image, title, author}) => {
   return (
     <>
-      <div>
-          <img src={image} alt={title}></img>
+      <div className="bookInfo">
+          <img src={image} alt={title} className="shopBookImage"></img>
           <p>{title}</p>
           <p>{author}</p>
           <input type="number"></input>

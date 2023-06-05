@@ -1,4 +1,5 @@
 const Cart = ({cart}) => {
+
     return (
       <>
         {cart.map(book => {
@@ -7,7 +8,7 @@ const Cart = ({cart}) => {
                     <img src={book.image} alt={book.title}></img>
                     <p>{book.title}</p>
                     <p>{book.author}</p>
-                    <input type="number"></input>
+                    <p>{book.amount}</p>
                 </div>
             )
          })}  
