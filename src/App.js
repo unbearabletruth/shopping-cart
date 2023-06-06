@@ -12,18 +12,18 @@ const App = () => {
   const addToCart = (book) => {
     if (cart.some(item => item.id === book.id)){
       setCart(
-        cart.map(item => {
-          if(book.id === item.id){
-            return {...item, amount: item.amount + 1}
-          }
-          return item;
-        })
+        cart.map(item => 
+          book.id === item.id ?
+          {...item, amount: item.amount + book.amount}
+          : item)
       )
       return;
     }
     setCart(cart.concat(book))
   }
-  console.log(cart)
+
+  console.log("cart", cart)
+  console.log('data', data)
   return (
     <>
       <BrowserRouter>

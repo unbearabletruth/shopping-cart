@@ -1,5 +1,4 @@
 const Cart = ({cart}) => {
-
     return (
       <>
         {cart.map(book => {
