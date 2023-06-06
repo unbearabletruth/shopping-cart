@@ -2,15 +2,19 @@
     display: flex;
     flex-wrap: wrap;
     padding: 50px;
+    gap: 10px;
 }
 
 .bookInShop{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 250px;
     height: 350px;
+    gap: 10px;
+    border: 1px solid #145cc0;
+    border-radius: 5px;
 }
 
 .bookInfo{
@@ -18,11 +22,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+    color: #3f3f46;
 }
 
 .shopBookImage{
     width: auto;
     height: 200px;
+}
+
+.title{
+    font-size: 1.3rem;
 }
 
 .inputWrapper{
@@ -32,6 +42,7 @@
 }
 
 input.bookInShop{
+    text-align: center; 
     width: 25px;
     height: 25px;
 }
@@ -45,4 +56,38 @@ input::-webkit-inner-spin-button {
 .inputButtons{
     display: flex;
     flex-direction: column;
+    gap:5px;
+}
+
+.toCartButton{
+    height: 35px;
+    width: 100px;
+    background-color: #3b82f6;
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+.toCartButton:hover{
+    cursor: pointer;
+    background-color: #2563eb;
+}
+
+button.inputButtons{
+    height: 20px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #3b82f6;
+    background-color: white;
+    color: #3f3f46;
+    font-size: 1.2rem;
+}
+
+button.inputButtons:hover{
+    border: 2px solid #3b82f6;
+    cursor: pointer;
 }

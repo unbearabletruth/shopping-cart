@@ -43,17 +43,18 @@ const Shop = ({addToCart}) => {
           <div key={book.id} className="bookInShop">
             <div className="bookInfo">
               <img src={book.image} alt={book.title} className="shopBookImage"></img>
-              <p>{book.title}</p>
-              <p>{book.author}</p>
+              <p className="title">{book.title}</p>
+              <p className="author">{book.author}</p>
             </div>
             <div className="inputWrapper">
+              <button onClick={() => addToCart(book)} className="toCartButton">Add to cart</button>
+              <label>Amount</label>
               <input className="bookInShop" name={book.id} onChange={handleAmount} value={book.amount} type="number"></input>
               <div className="inputButtons">
-                <button name={book.id} onClick={increase}>+</button>
-                <button name={book.id} onClick={decrease}>-</button>
+                <button className="inputButtons" name={book.id} onClick={increase}>+</button>
+                <button className="inputButtons" name={book.id} onClick={decrease}>-</button>
               </div>
             </div>
-            <button onClick={() => addToCart(book)}>Add to cart</button>
           </div>
         )
       })} 
