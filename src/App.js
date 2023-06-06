@@ -22,6 +22,31 @@ const App = () => {
     setCart(cart.concat(book))
   }
 
+  const increaseItemAmount = (e) => {
+    console.log(e.target.name)
+    setCart(
+      cart.map(item => 
+        e.target.name === item.id ?
+        {...item, amount: item.amount + 1}
+        : item)
+    )
+    return;
+  }
+
+  const decreaseItemAmount = (e) => {
+    setCart(
+      cart.map(item => 
+        e.target.name === item.id && item.amount > 1 ?
+        {...item, amount: item.amount - 1}
+        : item)
+    )
+    return;
+  }
+
+  const remove = (e) => {
+    setCart(cart.filter(item => item.id !== e.target.name))
+  }
+
   console.log("cart", cart)
   console.log('data', data)
   return (
@@ -37,7 +62,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop addToCart={addToCart}/>} />
-          <Route path="/cart" element={<Cart cart={cart}/>} />
+          <Route path="/cart" element={<Cart cart={cart} 
+            increase={increaseItemAmount} 
+            decrease={decreaseItemAmount}
+            remove={remove}/>} />
         </Routes>
       </BrowserRouter>
     </>
