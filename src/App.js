@@ -10,9 +10,20 @@ const App = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (book) => {
+    if (cart.some(item => item.id === book.id)){
+      setCart(
+        cart.map(item => {
+          if(book.id === item.id){
+            return {...item, amount: item.amount + 1}
+          }
+          return item;
+        })
+      )
+      return;
+    }
     setCart(cart.concat(book))
   }
-
+  console.log(cart)
   return (
     <>
       <BrowserRouter>
