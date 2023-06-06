@@ -1,0 +1,17 @@
+#cartWrapper{
+    padding: 75px;
+}
+
+.bookInCart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 150px;
+
+}
+
+.cartBookImage{
+    width: 100px;
+    height: auto;
+}

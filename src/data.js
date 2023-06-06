@@ -10,6 +10,14 @@ const data = [
         amount: 1,
         id: uniqid()
     },
+
+    {
+        image: images["ThePlague.jpg"],
+        title: "The Plague",
+        author: "Albert Camus",
+        amount: 1,
+        id: uniqid()
+    }
 ]
 
 export default data;
