@@ -17,7 +17,9 @@ const App = () => {
       setCart(
         cart.map(item => 
           book.id === item.id ?
-          {...item, amount: item.amount + book.amount}
+          {...item,
+           amount: item.amount + book.amount,
+          }
           : item)
       )
       return;
@@ -30,7 +32,9 @@ const App = () => {
     setCart(
       cart.map(item => 
         e.target.name === item.id ?
-        {...item, amount: item.amount + 1}
+        {...item,
+         amount: item.amount + 1,
+        }
         : item)
     )
     return;
@@ -40,7 +44,9 @@ const App = () => {
     setCart(
       cart.map(item => 
         e.target.name === item.id && item.amount > 1 ?
-        {...item, amount: item.amount - 1}
+        {...item,
+         amount: item.amount - 1,
+        }
         : item)
     )
     return;

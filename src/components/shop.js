@@ -47,6 +47,7 @@ const Shop = ({addToCart}) => {
                 <img src={book.image} alt={book.title} className="shopBookImage"></img>
                 <p className="titleShop">{book.title}</p>
                 <p className="authorShop">{book.author}</p>
+                <p className="priceShop">{`$${book.price}`}</p>
               </div>
             </Link>
             <div className="inputWrapper">

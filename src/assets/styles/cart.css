@@ -1,17 +1,20 @@
 #cartWrapper{
+    display: flex;
     padding: 75px;
+    background-color: #fffdfa;
 }
 
 .bookInCart{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 700px;
     height: 150px;
+    padding: 25px;
 
 }
 
 .cartBookImage{
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100px;
 }
