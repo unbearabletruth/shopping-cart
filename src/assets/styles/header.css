@@ -3,9 +3,12 @@ nav{
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    background-color: #8b5cf6;
+    background-color: #818cf8;
     padding: 0px 200px;
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+    z-index: 1;
 }
 
 ul{

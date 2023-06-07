@@ -9,7 +9,6 @@ const Book = ({addToCart}) => {
   
   useEffect(() => {
     const book = data.find((item) => item.id === id);
-    console.log(book)
     setCurrentBook(book);
   }, [id]);
 
@@ -20,23 +19,25 @@ const Book = ({addToCart}) => {
     })
   }
 
-  const increase = (e) => {
+  const increase = () => {
     setCurrentBook({
       ...currentBook,
       amount: currentBook.amount + 1
     })
   }
 
-  const decrease = (e) => {
-    setCurrentBook({
-      ...currentBook,
-      amount: currentBook.amount - 1
-    })
+  const decrease = () => {
+    if (currentBook.amount > 1){
+      setCurrentBook({
+        ...currentBook,
+        amount: currentBook.amount - 1
+      })
+    }
   }
-  console.log(currentBook)
+
   return (
     currentBook !== undefined ?
-    <div key={currentBook.id} className="bookInShop">
+    <div key={currentBook.id} className="book">
         <div className="bookInfo">
           <img src={currentBook.image} alt={currentBook.title} className="shopBookImage"></img>
           <p className="title">{currentBook.title}</p>
