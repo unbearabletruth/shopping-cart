@@ -1,4 +1,4 @@
-import "../assets/styles/shop.css"
+import "../assets/styles/book.css"
 import React, { useEffect, useState } from "react";
 import data from "../data";
 import { useParams } from "react-router-dom";
@@ -37,21 +37,25 @@ const Book = ({addToCart}) => {
 
   return (
     currentBook !== undefined ?
-    <div key={currentBook.id} className="book">
+    <div key={currentBook.id} className="bookWrapper">
+      <div className="book">
+        <img src={currentBook.image} alt={currentBook.title} className="bookImage"></img>
         <div className="bookInfo">
-          <img src={currentBook.image} alt={currentBook.title} className="shopBookImage"></img>
           <p className="title">{currentBook.title}</p>
           <p className="author">{currentBook.author}</p>
-        </div>
-        <div className="inputWrapper">
-          <button onClick={() => addToCart(currentBook)} className="toCartButton">Add to cart</button>
-          <label>Amount</label>
-          <input className="bookInShop" name={currentBook.id} onChange={handleAmount} value={currentBook.amount} type="number"></input>
-          <div className="inputButtons">
-            <button className="inputButtons" name={currentBook.id} onClick={increase}>+</button>
-            <button className="inputButtons" name={currentBook.id} onClick={decrease}>-</button>
+          <p className="description">{currentBook.description}</p>
+          <div className="inputWrapper">
+            <button onClick={() => addToCart(currentBook)} className="toCartButton">Add to cart</button>
+            <label>Amount</label>
+            <input className="inputInShop" name={currentBook.id} onChange={handleAmount} value={currentBook.amount} type="number"></input>
+            <div className="inputButtons">
+              <button className="inputButtons" name={currentBook.id} onClick={increase}>+</button>
+              <button className="inputButtons" name={currentBook.id} onClick={decrease}>-</button>
+            </div>
           </div>
         </div>
+        
+      </div>
     </div>
      : 
     <div>Sorry, but the book is not found!</div>
