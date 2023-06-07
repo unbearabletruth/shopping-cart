@@ -1,6 +1,6 @@
 
 import uniqid from "uniqid";
-import images from './assets/images/exportAll.js'
+import images from './assets/images/books/exportAll.js'
 
 const data = [
     {
