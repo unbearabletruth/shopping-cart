@@ -4,25 +4,3 @@
     box-sizing: border-box;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-color: #a5b4fc;
-    padding: 0px 200px;
-}
-
-ul{
-    display: flex;
-    gap: 100px;
-    list-style-type: none
-}
-
-a:link { text-decoration: none; }
-
-a:visited { text-decoration: none; }
-
-a:hover { text-decoration: none; }
-
-a:active { text-decoration: none; }
