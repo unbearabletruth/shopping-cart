@@ -1,6 +1,7 @@
 #bookShop{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 50px;
     gap: 20px;
     background-color: #fffdfa;
@@ -12,6 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 15px;
     width: 220px;
     height: 375px;
     gap: 10px;
@@ -35,7 +37,8 @@
 }
 
 .titleShop{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .authorShop{
