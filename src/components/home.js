@@ -11,7 +11,6 @@ const Home = () => {
               <p id="homeText">Check out our books!</p>
               <Link to="/shop" id="homeToShop">Shop</Link>
             </div>
-            
         </div>
       </>  
     );

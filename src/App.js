@@ -52,8 +52,25 @@ const App = () => {
     return;
   }
 
+  const changeAmount = (e, book) => {
+    console.log(book)
+    setCart(
+      cart.map(item => 
+        book.id === item.id ?
+        {...item,
+         amount: parseInt(e.target.value),
+        }
+        : item)
+    )
+    return;
+  }
+
   const remove = (e) => {
     setCart(cart.filter(item => item.id !== e.target.name))
+  }
+
+  const removeAll = () => {
+    setCart([])
   }
 
   console.log("cart", cart)
@@ -67,9 +84,12 @@ const App = () => {
           <Route path="/shop" element={<Shop addToCart={addToCart}/>} />
           <Route path="/shop/:id" element={<Book addToCart={addToCart}/>} />
           <Route path="/cart" element={<Cart cart={cart} 
-            increase={increaseItemAmount} 
+            increase={increaseItemAmount}
+            change={changeAmount} 
             decrease={decreaseItemAmount}
-            remove={remove}/>} />
+            remove={remove}
+            removeAll={removeAll}
+            />} />
           <Route path="*" element={<Error404/>} />
         </Routes>
       </BrowserRouter>

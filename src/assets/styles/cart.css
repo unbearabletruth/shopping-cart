@@ -1,7 +1,9 @@
 #cartWrapper{
     display: flex;
-    padding: 75px;
+    padding: 125px;
     background-color: #fffdfa;
+    height: 100vh;
+    gap: 100px;
 }
 
 .bookInCart{
