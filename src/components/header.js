@@ -11,7 +11,7 @@ const Header = ({cart}) => {
           </ul>
           <Link to="/cart" id="cartLink">
             <img id="cartIcon" src={cartIcon} alt="cart icon"></img>
-            <span id="cartItemsNumber">{cart.length}</span>
+            <div id="cartItemsNumber">{cart.length}</div>
           </Link>
         </nav>
     )

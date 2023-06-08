@@ -44,7 +44,7 @@ const Book = ({addToCart}) => {
           <p className="title">{currentBook.title}</p>
           <p className="author">{currentBook.author}</p>
           <p className="description">{currentBook.description}</p>
-          <p className="price">Price: ${currentBook.price}</p>
+          <p className="price">Price: ${currentBook.price.toFixed(2)}</p>
           <div className="inputWrapper">
             <button onClick={() => addToCart(currentBook)} className="toCartButton">Add to cart</button>
             <label>Amount</label>

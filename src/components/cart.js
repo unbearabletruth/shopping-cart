@@ -18,7 +18,16 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
               <p className="title">{book.title}</p>
               <p className="author">{book.author}</p>
             </div>
-            <p>{`$${book.price * book.amount}`}</p>
+            <div className="priceBlock">
+              {book.amount > 1 ?
+                <>
+                  <p className="priceForOne">One: ${book.price.toFixed(2)}</p>
+                  <p>Total: {`$${(book.price * book.amount).toFixed(2)}`}</p>
+                </>
+              : 
+                <p className="price">${book.price.toFixed(2)}</p>}
+              
+            </div>
             <div className="inputBlock">
               <button className="cartInputButton" name={book.id} onClick={decrease}>-</button>
               <input className="inputInShop" name={book.id} onChange={(e) => change(e, book)} value={book.amount} type="number"></input>
@@ -30,8 +39,8 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
         })}
         </div>
           <div id="payment">
-            <p id="totalPriceText">Total price:</p>
-            <p id="totalPrice">${totalPrice}</p>
+            <p id="totalPriceText">Order total</p>
+            <p id="totalPrice">${totalPrice.toFixed(2)}</p>
             <button id="payButton">Pay</button>
           </div>
     </div>

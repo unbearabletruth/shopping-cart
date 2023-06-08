@@ -22,6 +22,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 }
 
 #cartItemsNumber{
@@ -29,9 +30,8 @@ ul{
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+    padding: 3px;
+    border-radius: 10px;
     color:#8b5cf6;
     font-size: 1rem;
 }

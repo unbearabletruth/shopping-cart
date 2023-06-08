@@ -1,8 +1,8 @@
 #cartWrapper{
     display: flex;
+    justify-content: space-around;
     padding: 125px;
     background-color: #fffdfa;
-    height: 100vh;
     gap: 100px;
     color:#3f3f46;
 }
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 700px;
+    width: 800px;
     height: 150px;
     padding: 25px;
     background-color: #f8fafc;
@@ -31,6 +31,9 @@
 }
 
 .titleAndAuthor{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     text-align: center;
 }
 
@@ -39,6 +42,16 @@
 }
 
 .author{
+    font-size: 0.8rem;
+}
+
+.priceBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.priceForOne{
     font-size: 0.8rem;
 }
 
@@ -106,6 +119,7 @@
 
 #payment{
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -115,8 +129,12 @@
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
+#totalPriceText{
+    font-size: 1.3rem;
+}
+
 #totalPrice{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 #emptyCartInfo{
