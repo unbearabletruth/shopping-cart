@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom"
+import "../assets/styles/error404.css"
 
 const Error404 = () => {
     return(
-        <>
-            <p>404</p>
-            <p>Page not found</p>
-            <Link to="/">Home</Link>
-        </>
+        <div id="errorWrapper">
+            <p id="errorNumber">404</p>
+            <p id="errorMessage">Sorry, but your page is not found</p>
+            <Link to="/" id="errorToHome">Home</Link>
+        </div>
     )
 }
 
