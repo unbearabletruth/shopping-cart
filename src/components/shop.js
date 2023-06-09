@@ -42,7 +42,7 @@ const Shop = ({addToCart}) => {
       {shopItems.map(book => {
         return (
           <div key={book.id} className="bookInShop">
-            <Link to={`/shop/${book.id}`}>
+            <Link to={`/shop/${book.title}`}>
               <div className="bookInfoShop">
                 <img src={book.image} alt={book.title} className="shopBookImage"></img>
                 <p className="titleShop">{book.title}</p>

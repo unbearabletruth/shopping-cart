@@ -2,13 +2,14 @@ import "../assets/styles/book.css"
 import React, { useEffect, useState } from "react";
 import data from "../data";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 const Book = ({addToCart}) => {
   const {id} = useParams();
   const [currentBook, setCurrentBook] = useState(data.find((item) => item.id === id))
   
   useEffect(() => {
-    const book = data.find((item) => item.id === id);
+    const book = data.find((item) => item.title === id);
     setCurrentBook(book);
   }, [id]);
 
@@ -55,12 +56,20 @@ const Book = ({addToCart}) => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
      : 
-    <div>Sorry, but the book is not found!</div>
+    <BookNotFound/>
   );
 };
 
-export default Book;
+const BookNotFound = () => {
+  return (
+      <div id="bookNotFound">
+          <p id="notFoundMessage">Sorry, but the book is not found!</p>
+          <Link to="/shop" id="backToShop">Look for another book</Link>
+      </div>
+  )
+}
+
+export {Book, BookNotFound};

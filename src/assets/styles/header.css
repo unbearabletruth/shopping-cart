@@ -56,3 +56,40 @@ a:visited {
 a:hover { text-decoration: none; }
 
 a:active { text-decoration: none; }
+
+#searchAndButton{
+    display: flex;
+    align-items: center;
+}
+
+#headerSearch{
+    appearance: none;
+    width: 350px;
+    height: 30px;
+    border: 0px;
+    border-radius: 15px 0px 0px 15px;
+    padding: 0px 10px;
+}
+
+#headerSearch:focus{
+    outline: none;
+}
+
+#searchButton{
+    height: 30px;
+    width: 40px;
+    border: 0px;
+    border-left: 1px solid #3730a3;
+    border-radius: 0px 15px 15px 0px;
+    background-color: white;
+}
+
+#searchButton:hover{
+    cursor: pointer;
+}
+
+#searchIcon{
+    width: 15px;
+    height: auto;
+    filter: invert(22%) sepia(2%) saturate(2529%) hue-rotate(202deg) brightness(89%) contrast(83%);
+}

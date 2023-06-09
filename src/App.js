@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./components/home";
 import Shop from "./components/shop";
-import Book from "./components/book";
+import {Book, BookNotFound} from "./components/book";
 import Cart from "./components/cart";
 import Error404 from "./components/error404";
 import "./assets/styles/App.css"
@@ -83,6 +83,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop addToCart={addToCart}/>} />
           <Route path="/shop/:id" element={<Book addToCart={addToCart}/>} />
+          <Route path="/shop/*" element={<BookNotFound/>} />
           <Route path="/cart" element={<Cart cart={cart} 
             increase={increaseItemAmount}
             change={changeAmount} 

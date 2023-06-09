@@ -34,3 +34,30 @@
 .author{
     font-size: 1.2rem;
 }
+
+#bookNotFound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 25px;
+}
+
+#notFoundMessage{
+    color: #3f3f46;
+    font-size: 1.5rem;
+}
+
+#backToShop{
+    padding: 10px 25px;
+    background-color: #818cf8;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#backToShop:hover{
+    background-color: #6366f1;
+    color: white;
+}

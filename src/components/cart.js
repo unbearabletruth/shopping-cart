@@ -15,8 +15,8 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
           <div key={book.id} className="bookInCart">
             <img src={book.image} alt={book.title} className="cartBookImage"></img>
             <div className="titleAndAuthor">
-              <p className="title">{book.title}</p>
-              <p className="author">{book.author}</p>
+              <p className="titleCart">{book.title}</p>
+              <p className="authorCart">{book.author}</p>
             </div>
             <div className="priceBlock">
               {book.amount > 1 ?
@@ -25,7 +25,7 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
                   <p>Total: {`$${(book.price * book.amount).toFixed(2)}`}</p>
                 </>
               : 
-                <p className="price">${book.price.toFixed(2)}</p>}
+                <p className="priceCart">${book.price.toFixed(2)}</p>}
               
             </div>
             <div className="inputBlock">
