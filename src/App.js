@@ -6,6 +6,7 @@ import Shop from "./components/shop";
 import {Book, BookNotFound} from "./components/book";
 import Cart from "./components/cart";
 import Error404 from "./components/error404";
+import Footer from "./components/Footer";
 import "./assets/styles/App.css"
 import data from "./data";
 
@@ -93,6 +94,7 @@ const App = () => {
             />} />
           <Route path="*" element={<Error404/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

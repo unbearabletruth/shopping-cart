@@ -1,0 +1,43 @@
+#footer {
+    display: flex;
+    height: 200px;
+    background-color: #e2e8f0;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    color: #71717a;
+}
+
+#footerInfo{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 15px;
+    text-align: center;
+}
+
+.footerInfoList:hover{
+    color: #3f3f46;
+    cursor: pointer;
+}
+
+#socials{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#icons{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.socialsIcon{
+    width: 25px;
+    height: auto;
+}
+
+.socialsIcon:hover{
+    cursor: pointer;
+}

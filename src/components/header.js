@@ -32,7 +32,7 @@ const Header = ({cart}) => {
 
     return(
         <nav>
-          <ul>
+          <ul id="headerLinks">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/shop">Shop</Link></li>
           </ul>
