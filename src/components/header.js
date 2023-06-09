@@ -15,7 +15,6 @@ const Header = ({cart}) => {
 
   const onSearchSubmit = () => {
     if (data.some(item => item.title === search)){
-      console.log("hey")
       navigate(`./shop/${search}`)
     }else{
       navigate('./shop/*')
