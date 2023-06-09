@@ -157,7 +157,7 @@ button.inputButtons:hover{
     height: 100%;
     cursor: pointer;
     background: #fff;
-    font-size: 1.2em;
+    font-size: 1rem;
     border: 1px solid #a1a1aa;
     outline: none;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -182,7 +182,8 @@ button.inputButtons:hover{
 }
 
 .dropdown .options div {
-    padding: 12px 20px;
+    padding: 8px 16px;
+    color:#3f3f46;
     cursor: pointer;
 }
 
