@@ -1,4 +1,4 @@
-import "../assets/styles/cart.css"
+import "../assets/styles/Cart.css"
 import { Link } from "react-router-dom"
 import deleteIcon from "../assets/images/bin.svg"
 

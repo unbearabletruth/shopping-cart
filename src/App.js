@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/header";
-import Home from "./components/home";
-import Shop from "./components/shop";
-import {Book, BookNotFound} from "./components/book";
-import Cart from "./components/cart";
-import Error404 from "./components/error404";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Shop from "./components/Shop";
+import {Book, BookNotFound} from "./components/Book";
+import Cart from "./components/Cart";
+import Error404 from "./components/Error404";
 import Footer from "./components/Footer";
 import "./assets/styles/App.css"
 import data from "./data";

@@ -1,5 +1,6 @@
 #cartWrapper{
     display: flex;
+    min-height: 100vh;
     justify-content: space-around;
     padding: 125px;
     background-color: #fffdfa;

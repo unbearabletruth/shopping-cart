@@ -1,4 +1,4 @@
-import "../assets/styles/shop.css"
+import "../assets/styles/Shop.css"
 import React, { useState } from "react";
 import data from "../data";
 import { Link } from "react-router-dom"

@@ -1,4 +1,4 @@
-import "../assets/styles/book.css"
+import "../assets/styles/Book.css"
 import React, { useEffect, useState } from "react";
 import data from "../data";
 import { useParams } from "react-router-dom";

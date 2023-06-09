@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import "../assets/styles/header.css"
+import "../assets/styles/Header.css"
 import cartIcon from "../assets/images/cart.png"
 import searchIcon from "../assets/images/magnifyingGlass.svg"
 import { useState } from "react"
