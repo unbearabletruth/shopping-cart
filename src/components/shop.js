@@ -36,34 +36,14 @@ const Shop = ({addToCart}) => {
     return;
   }
 
-  const sortByTitle = () => {
-    setShopItems([...shopItems].sort((a, b) => {
-      if (a.title < b.title) {
-        return -1;
-      }
-      if (a.title > b.title) {
-        return 1;
-      }
-      return 0;
-    }));
-  }
-
-  const sortByPrice = () => {
-    setShopItems([...shopItems].sort((a, b) => {
-      if (a.price < b.price) {
-        return -1;
-      }
-      if (a.price > b.price) {
-        return 1;
-      }
-      return 0;
-    }));
+  const handleState = (change) => {
+    setShopItems(change)
   }
 
   console.log("shop", shopItems)
   return (
     <div id="bookShop">
-      <SortDropdown byPrice={sortByPrice} byTitle={sortByTitle}/>
+      <SortDropdown handleState={handleState} shopItems={shopItems}/>
       <div id="allBooks">
         {shopItems.map(book => {
           return (
@@ -92,7 +72,7 @@ const Shop = ({addToCart}) => {
   );
 };
 
-const SortDropdown = ({byPrice, byTitle}) => {
+const SortDropdown = ({handleState, shopItems}) => {
   const [dropdownStatus, setDropdownStatus] = useState(false);
   const [sortText, setSortText] = useState("Sort by...")
 
@@ -100,7 +80,29 @@ const SortDropdown = ({byPrice, byTitle}) => {
     setDropdownStatus(!dropdownStatus);
   };
 
-  const changeSortTitle = (e) => {
+  const sortByTitle = (e) => {
+    handleState([...shopItems].sort((a, b) => {
+      if (a.title < b.title) {
+        return -1;
+      }
+      if (a.title > b.title) {
+        return 1;
+      }
+      return 0;
+    }));
+    setSortText(e.target.textContent)
+  }
+
+  const sortByPrice = (e) => {
+    handleState([...shopItems].sort((a, b) => {
+      if (a.price < b.price) {
+        return -1;
+      }
+      if (a.price > b.price) {
+        return 1;
+      }
+      return 0;
+    }));
     setSortText(e.target.textContent)
   }
 
@@ -108,8 +110,8 @@ const SortDropdown = ({byPrice, byTitle}) => {
     <div className={`dropdown ${dropdownStatus ? "active" : ""}`} onClick={handleToggle}>
       <input className="text-box" type="text" placeholder={sortText} readOnly></input>
       <div className="options">
-        <div onClick={(e) => {byTitle(); changeSortTitle(e)}}>Title</div>
-        <div onClick={(e) => {byPrice(); changeSortTitle(e)}}>Price</div>
+        <div onClick={(e) => sortByTitle(e)}>Title</div>
+        <div onClick={(e) => sortByPrice(e)}>Price</div>
       </div>
     </div>
   )
