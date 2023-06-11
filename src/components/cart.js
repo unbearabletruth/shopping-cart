@@ -12,7 +12,7 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
       <button id="removeAllButton" onClick={removeAll}>remove all</button>
       {cart.map(book => {
         return(
-          <div key={book.id} className="bookInCart">
+          <div key={book.id} className="bookInCart" data-testid="bookInCart">
             <img src={book.image} alt={book.title} className="cartBookImage"></img>
             <div className="titleAndAuthor">
               <p className="titleCart">{book.title}</p>
@@ -33,7 +33,7 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
               <input className="inputInShop" name={book.id} onChange={(e) => change(e, book)} value={book.amount} type="number"></input>
               <button className="cartInputButton" name={book.id} onClick={increase}>+</button>
             </div>
-            <img src={deleteIcon} alt="deleteIcon" className="deleteImage" name={book.id} onClick={remove}></img> 
+            <img src={deleteIcon} alt="deleteIcon" className="deleteImage" name={book.id} onClick={remove} aria-label={book.author}></img> 
           </div>
         )
         })}
