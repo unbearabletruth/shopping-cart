@@ -21,19 +21,46 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
             <div className="priceBlock">
               {book.amount > 1 ?
                 <>
-                  <p className="priceForOne">One: ${book.price.toFixed(2)}</p>
-                  <p>Total: {`$${(book.price * book.amount).toFixed(2)}`}</p>
+                  <p className="priceForOne" data-testid="priceForOne">One: ${book.price.toFixed(2)}</p>
+                  <p data-testid="priceForMultiple">Total: {`$${(book.price * book.amount).toFixed(2)}`}</p>
                 </>
               : 
-                <p className="priceCart">${book.price.toFixed(2)}</p>}
+                <p className="priceCart" data-testid="priceOnlyForOne">${book.price.toFixed(2)}</p>}
               
             </div>
             <div className="inputBlock">
-              <button className="cartInputButton" name={book.id} onClick={decrease} aria-label={`dec ${book.title}`}>-</button>
-              <input className="inputInShop" name={book.id} onChange={(e) => change(e, book)} value={book.amount} type="number" data-testid={book.title}></input>
-              <button className="cartInputButton" name={book.id} onClick={increase} aria-label={`inc ${book.title}`}>+</button>
+              <button 
+                className="cartInputButton" 
+                name={book.id} 
+                onClick={decrease} 
+              >
+                -
+              </button>
+              <input 
+                className="inputInShop" 
+                name={book.id} 
+                onChange={(e) => change(e, book)} 
+                value={book.amount} 
+                type="number"
+                data-testid="amountInput"
+              >
+              </input>
+              <button 
+                className="cartInputButton" 
+                name={book.id} 
+                onClick={increase} 
+              >
+                +
+              </button>
             </div>
-            <img src={deleteIcon} alt="deleteIcon" className="deleteImage" name={book.id} onClick={remove} aria-label={book.author}></img> 
+            <img 
+              src={deleteIcon} 
+              alt="deleteIcon" 
+              className="deleteImage" 
+              name={book.id} 
+              onClick={remove} 
+            >
+            </img> 
           </div>
         )
         })}
