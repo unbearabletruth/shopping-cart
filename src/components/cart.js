@@ -29,9 +29,9 @@ const Cart = ({cart, increase, decrease, remove, removeAll, change}) => {
               
             </div>
             <div className="inputBlock">
-              <button className="cartInputButton" name={book.id} onClick={decrease}>-</button>
-              <input className="inputInShop" name={book.id} onChange={(e) => change(e, book)} value={book.amount} type="number"></input>
-              <button className="cartInputButton" name={book.id} onClick={increase}>+</button>
+              <button className="cartInputButton" name={book.id} onClick={decrease} aria-label={`dec ${book.title}`}>-</button>
+              <input className="inputInShop" name={book.id} onChange={(e) => change(e, book)} value={book.amount} type="number" data-testid={book.title}></input>
+              <button className="cartInputButton" name={book.id} onClick={increase} aria-label={`inc ${book.title}`}>+</button>
             </div>
             <img src={deleteIcon} alt="deleteIcon" className="deleteImage" name={book.id} onClick={remove} aria-label={book.author}></img> 
           </div>
