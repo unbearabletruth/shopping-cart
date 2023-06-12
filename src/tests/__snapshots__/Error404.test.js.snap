@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error404 snapshot of error404 page 1`] = `
+<div>
+  <div
+    id="errorWrapper"
+  >
+    <p
+      id="errorNumber"
+    >
+      404
+    </p>
+    <p
+      id="errorMessage"
+    >
+      Sorry, but your page is not found
+    </p>
+    <a
+      href="/"
+      id="errorToHome"
+    >
+      Home
+    </a>
+  </div>
+</div>
+`;

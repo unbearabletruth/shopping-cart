@@ -8,14 +8,34 @@ const cart = [
   { image: 'smth1', title: "title1", author: "author1", description: "description1", amount: 1, price: 12, id: 2 },
 ];
 
-  const increase = jest.fn();
-  const decrease = jest.fn();
-  const remove = jest.fn();
-  const removeAll = jest.fn();
-  const change = jest.fn();
+const increase = jest.fn();
+const decrease = jest.fn();
+const remove = jest.fn();
+const removeAll = jest.fn();
+const change = jest.fn();
 
 describe('cart', () => {
   describe('renders proper DOM elements', () => {
+    test('snapshot of cart with books', () => {
+      const {container} = render(
+          <Cart
+            cart={cart}
+          />
+      );
+      expect(container).toMatchSnapshot();
+    });
+
+    test('snapshot of empty cart', () => {
+      const {container} = render(
+        <MemoryRouter>
+          <Cart
+            cart={[]}
+          />
+        </MemoryRouter>
+      );
+      expect(container).toMatchSnapshot();
+    });
+
     test('renders books in cart', () => {
       render(
           <Cart
@@ -57,6 +77,7 @@ describe('cart', () => {
       expect(screen.getByTestId("priceOnlyForOne")).toBeInTheDocument();
     });
   });
+
   describe('component functionality', () => {
     test('removes book from cart', async () => {
       const user = userEvent.setup();

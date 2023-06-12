@@ -5,14 +5,12 @@ import twitterIcon from "../assets/images/twitter.svg"
 const Footer = () => {
     return (
         <div id="footer">
-            
-                <ul id="footerInfo">
-                    <li className="footerInfoList">About us</li>
-                    <li className="footerInfoList">Polices</li>
-                    <li className="footerInfoList">Help</li>
-                    <li className="footerInfoList">Want to work with us?</li>
-                </ul>
-
+            <ul id="footerInfo">
+                <li className="footerInfoList">About us</li>
+                <li className="footerInfoList">Polices</li>
+                <li className="footerInfoList">Help</li>
+                <li className="footerInfoList">Want to work with us?</li>
+            </ul>
             <div id="socials">
                 <p>Our socials</p>
                 <div id="icons">
