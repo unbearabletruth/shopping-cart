@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`book renders proper DOM elements snapshot of book not found 1`] = `
+<div>
+  <div
+    id="bookNotFound"
+  >
+    <p
+      id="notFoundMessage"
+    >
+      Sorry, but the book is not found!
+    </p>
+    <a
+      href="/shop"
+      id="backToShop"
+    >
+      Look for another book
+    </a>
+  </div>
+</div>
+`;
+
+exports[`book renders proper DOM elements snapshot of page with book 1`] = `
+<div>
+  <div
+    class="bookWrapper"
+  >
+    <div
+      class="book"
+    >
+      <img
+        alt="Behave"
+        class="bookImage"
+        src="smth"
+      />
+      <div
+        class="bookInfo"
+      >
+        <p
+          class="title"
+        >
+          Behave
+        </p>
+        <p
+          class="author"
+        >
+          author
+        </p>
+        <p
+          class="description"
+        >
+          description
+        </p>
+        <p
+          class="price"
+        >
+          Price: $
+          10.00
+        </p>
+        <div
+          class="inputWrapper"
+        >
+          <button
+            class="toCartButton"
+          >
+            Add to cart
+          </button>
+          <label
+            for="amountInput"
+          >
+            Amount
+          </label>
+          <input
+            class="inputInShop"
+            id="amountInput"
+            name="1"
+            type="number"
+            value="1"
+          />
+          <div
+            class="inputButtons"
+          >
+            <button
+              class="inputButtons"
+              name="1"
+            >
+              +
+            </button>
+            <button
+              class="inputButtons"
+              name="1"
+            >
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

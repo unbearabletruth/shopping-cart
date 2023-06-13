@@ -50,18 +50,47 @@ const Shop = ({addToCart}) => {
             <div key={book.id} className="bookInShop">
               <Link to={`/shop/${book.title}`}>
                 <div className="bookInfoShop">
-                  <img src={book.image} alt={book.title} className="shopBookImage"></img>
+                  <img 
+                    src={book.image} 
+                    alt={book.title} 
+                    className="shopBookImage"
+                  >
+                  </img>
                   <p className="titleShop">{book.title}</p>
                   <p className="authorShop">{book.author}</p>
                   <p className="priceShop">{`$${book.price.toFixed(2)}`}</p>
                 </div>
               </Link>
               <div className="inputWrapper">
-                <button onClick={() => addToCart(book)} className="toCartButton">Add to cart</button>
-                <input className="inputInShop" name={book.id} onChange={handleAmount} value={book.amount} type="number"></input>
+                <button 
+                  onClick={() => addToCart(book)} 
+                  className="toCartButton"
+                >
+                  Add to cart
+                </button>
+                <input 
+                  className="inputInShop" 
+                  name={book.id} 
+                  onChange={handleAmount} 
+                  value={book.amount} 
+                  type="number"
+                >
+                </input>
                 <div className="inputButtons">
-                  <button className="inputButtons" name={book.id} onClick={increase}>+</button>
-                  <button className="inputButtons" name={book.id} onClick={decrease}>-</button>
+                  <button 
+                    className="inputButtons" 
+                    name={book.id} 
+                    onClick={increase}
+                  >
+                    +
+                  </button>
+                  <button 
+                    className="inputButtons" 
+                    name={book.id} 
+                    onClick={decrease}
+                  >
+                    -
+                  </button>
                 </div>
               </div>
             </div>

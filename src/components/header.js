@@ -37,7 +37,13 @@ const Header = ({cart}) => {
             <li><Link to="/shop">Shop</Link></li>
           </ul>
           <div id="searchAndButton">
-            <input id="headerSearch" onChange={handleSearch} onKeyDown={onSearchSubmitEnter} type="search"></input>
+            <input 
+              id="headerSearch" 
+              onChange={handleSearch} 
+              onKeyDown={onSearchSubmitEnter} 
+              type="search"
+            >
+            </input>
             <button id="searchButton" onClick={onSearchSubmit}>
               <img id="searchIcon" src={searchIcon} alt="search"></img>
             </button>
