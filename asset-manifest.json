@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.34f3f5a7.css",
+    "main.js": "/shopping-cart/static/js/main.fe5e5df3.js",
+    "static/media/Behave.jpg": "/shopping-cart/static/media/Behave.2f1ffeb54225345d4841.jpg",
+    "static/media/ThePlague.jpg": "/shopping-cart/static/media/ThePlague.276e1fa25d80d1130a48.jpg",
+    "static/media/homeBackground.jpg": "/shopping-cart/static/media/homeBackground.fe02afe228e60c7618bd.jpg",
+    "static/media/NorwegianWood.jpg": "/shopping-cart/static/media/NorwegianWood.b4a34e8f7cbf50f73acd.jpg",
+    "static/media/TheOriginOfSpecies.jpg": "/shopping-cart/static/media/TheOriginOfSpecies.794befda0e3a87506bbd.jpg",
+    "static/media/Idiot.jpg": "/shopping-cart/static/media/Idiot.8d422716ccb79a85121b.jpg",
+    "static/media/GunsGermsAndSteel.jpg": "/shopping-cart/static/media/GunsGermsAndSteel.3bfc364e458d60b6f38e.jpg",
+    "static/media/CancerWard.jpg": "/shopping-cart/static/media/CancerWard.d7164a110e8d050d5e13.jpg",
+    "static/media/Catch22.jpg": "/shopping-cart/static/media/Catch22.c28f9ca8b900c0b09853.jpg",
+    "static/media/Fahrenheit451.jpg": "/shopping-cart/static/media/Fahrenheit451.2a87d6d130e32dd1f88d.jpg",
+    "static/media/TheStoryOfTheHumanBody.jpg": "/shopping-cart/static/media/TheStoryOfTheHumanBody.d9c04a5b9c8212f74606.jpg",
+    "static/media/instagram.svg": "/shopping-cart/static/media/instagram.ff0d2e5b78a841746025447f6b4d0b33.svg",
+    "static/media/bin.svg": "/shopping-cart/static/media/bin.18d967047ce8e906d5703944738502b9.svg",
+    "static/media/magnifyingGlass.svg": "/shopping-cart/static/media/magnifyingGlass.bc5590126e0bef022e4ad30df9ddbc0e.svg",
+    "static/media/twitter.svg": "/shopping-cart/static/media/twitter.f36e0951dc3610ed16075b3744c797ce.svg",
+    "index.html": "/shopping-cart/index.html",
+    "main.34f3f5a7.css.map": "/shopping-cart/static/css/main.34f3f5a7.css.map",
+    "main.fe5e5df3.js.map": "/shopping-cart/static/js/main.fe5e5df3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34f3f5a7.css",
+    "static/js/main.fe5e5df3.js"
+  ]
+}
