@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
@@ -77,26 +77,24 @@ const App = () => {
   console.log("cart", cart)
   console.log('data', data)
   return (
-    <>
-      <BrowserRouter>
-        <Header cart={cart}/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop addToCart={addToCart}/>} />
-          <Route path="/shop/:id" element={<Book addToCart={addToCart}/>} />
-          <Route path="/shop/*" element={<BookNotFound/>} />
-          <Route path="/cart" element={<Cart cart={cart} 
-            increase={increaseItemAmount}
-            change={changeAmount} 
-            decrease={decreaseItemAmount}
-            remove={remove}
-            removeAll={removeAll}
-            />} />
-          <Route path="*" element={<Error404/>} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
-    </>
+    <HashRouter>
+      <Header cart={cart}/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop addToCart={addToCart}/>} />
+        <Route path="/shop/:id" element={<Book addToCart={addToCart}/>} />
+        <Route path="/shop/*" element={<BookNotFound/>} />
+        <Route path="/cart" element={<Cart cart={cart} 
+          increase={increaseItemAmount}
+          change={changeAmount} 
+          decrease={decreaseItemAmount}
+          remove={remove}
+          removeAll={removeAll}
+          />} />
+        <Route path="*" element={<Error404/>} />
+      </Routes>
+      <Footer/>
+    </HashRouter>
   );
 };
 

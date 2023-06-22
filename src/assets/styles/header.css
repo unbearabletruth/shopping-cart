@@ -18,6 +18,14 @@ ul#headerLinks{
     list-style-type: none;
 }
 
+.headerLink{
+    color: white;
+}
+
+.headerLink:hover{
+    color: #e5e7eb;
+}
+
 #cartLink{
     display: flex;
     align-items: center;

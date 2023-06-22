@@ -40,8 +40,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
     gap: 25px;
+    flex: 1;
 }
 
 #notFoundMessage{

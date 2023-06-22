@@ -33,8 +33,8 @@ const Header = ({cart}) => {
     return(
         <nav>
           <ul id="headerLinks">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shop">Shop</Link></li>
+            <li><Link to="/" className="headerLink">Home</Link></li>
+            <li><Link to="/shop" className="headerLink">Shop</Link></li>
           </ul>
           <div id="searchAndButton">
             <input 
